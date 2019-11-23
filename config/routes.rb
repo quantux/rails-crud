@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  get 'home/add_venda'
+  post 'home/create_venda'
+
   resources :vendas
   resources :vendedors
   resources :clientes

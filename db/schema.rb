@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_11_23_040603) do
 
   create_table "vendas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "item"
-    t.decimal "total", precision: 10
+    t.decimal "total", precision: 10, scale: 2
     t.integer "cliente_id"
     t.integer "vendedor_id"
     t.datetime "created_at", precision: 6, null: false

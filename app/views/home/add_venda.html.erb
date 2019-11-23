@@ -1,0 +1,24 @@
+<h1>Adicionar nova venda</h1>
+
+<form method="POST" action="/home/create_venda">
+    <select name="cliente_id">
+        <option value="0">Selecione o cliente</option>
+
+        <% @clientes.each do |cliente| %>
+            <option value="<%= cliente.id %>"><%= cliente.nome %></option>
+        <% end %>
+    </select>
+
+    <select name="vendedor_id">
+        <option value="0">Selecione o vendedor</option>
+        
+        <% @vendedores.each do |vendedor| %>
+            <option value="<%= vendedor.id %>"><%= vendedor.nome %></option>
+        <% end %>
+    </select>
+
+    <input type="text" name="item" placeholder="Nome do item" />
+    <input type="text" name="total" placeholder="Total" />
+
+    <button type="submit">Nova venda</button>
+</form>

@@ -1,24 +1,21 @@
-# README
+# Ruby on Rails - HOWTO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Criar um novo projeto com MySQL:
+rails new rails-crud -d mysql
 
-Things you may want to cover:
+* Modificar a senha no arquivo database.yml
 
-* Ruby version
+* Gerar scaffolds:
+rails g scaffold Venda item:string total:decimal cliente_id:integer vendedor_id:integer
+rails g scaffold Cliente nome:string cpf:string score:integer
+rails g scaffold Vendedor nome:string
 
-* System dependencies
+* Criar o controller com a view para /home/index
+* Criar o controller com a view para /home/add_venda
+* Criar o controller /home/create_venda para processar a requisição POST que irá criar uma nova venda.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Para rodar o app:
+1. Clonar o projeto
+2. rake db:drop db:create db:migrate db:seed
+3. rails s
+4. Acessar via http://localhost:3000

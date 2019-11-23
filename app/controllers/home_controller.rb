@@ -18,6 +18,11 @@ class HomeController < ApplicationController
     item = params[:item]
     total = params[:total]
 
+    # Exemplo de código dinâmico
+    a = "string"
+    b = 4
+    c = 23.78
+
     # Verificações...
     if(cliente_id == 0 || vendedor_id == 0 || item == '' || total == '')
       redirect_to(controller: 'home', action: 'index')

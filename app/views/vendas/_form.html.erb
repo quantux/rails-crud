@@ -1,0 +1,37 @@
+<%= form_with(model: venda, local: true) do |form| %>
+  <% if venda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(venda.errors.count, "error") %> prohibited this venda from being saved:</h2>
+
+      <ul>
+        <% venda.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item %>
+    <%= form.text_field :item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total %>
+    <%= form.text_field :total %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cliente_id %>
+    <%= form.number_field :cliente_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vendedor_id %>
+    <%= form.number_field :vendedor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

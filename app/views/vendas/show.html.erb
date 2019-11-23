@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @venda.item %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @venda.total %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @venda.cliente_id %>
+</p>
+
+<p>
+  <strong>Vendedor:</strong>
+  <%= @venda.vendedor_id %>
+</p>
+
+<%= link_to 'Edit', edit_venda_path(@venda) %> |
+<%= link_to 'Back', vendas_path %>
